@@ -1,8 +1,8 @@
-This [rbenv](http://rbenv.org/) plugin adds the `rbenv update` command that updated rbenv and all installed plugins.
+This [phpenv](https://github.com/CHH/phpenv) plugin adds the `phpenv update` command that updates phpenv and all installed plugins.
 
 ## Installation
 
 Simply clone the repository into the plugins directory:
 
-    mkdir -p $RBENV_ROOT/plugins
-    git clone https://github.com/rkh/rbenv-update.git $RBENV_ROOT/plugins/rbenv-update
+    mkdir -p ~/.phpenv/plugins
+    git clone https://github.com/jridgewell/phpenv-update.git ~/.phpenv/plugins/phpenv-update

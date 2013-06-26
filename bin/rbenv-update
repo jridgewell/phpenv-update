@@ -8,7 +8,7 @@ indent_output() {
   done
 }
 
-rbenv_update() {
+phpenv_update() {
   echo -e "\033[1;32mupdating $1\033[0m"
   git checkout master 2>&1 | indent_output
   git fetch origin 2>&1 | indent_output
@@ -16,13 +16,13 @@ rbenv_update() {
   echo
 }
 
-cd ${RBENV_ROOT:-$(rbenv root)}
-rbenv_update rbenv
+cd ${RBENV_ROOT:-$(phpenv root)}
+phpenv_update phpenv
 
 for plugin in plugins/*; do
   if [ -d $plugin/.git ]; then
     cd $plugin
-    rbenv_update `basename $plugin`
+    phpenv_update `basename $plugin`
     cd - >/dev/null
   fi
 done
